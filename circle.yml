@@ -11,6 +11,10 @@ test:
   override:
     - ./manage.py test
 
+depedencies:
+  override:
+    - pip install setuptools==9.1
+    - pip install -r requirements.txt
 
 deployment:
   staging:

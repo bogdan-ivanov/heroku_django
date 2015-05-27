@@ -1,0 +1,12 @@
+database:
+  override:
+    - psql --command "ALTER USER postgres with encrypted password 'iddqdidkfa'" && createdb -O postgres django_heroku django_heroku
+
+## Customize dependencies
+#dependencies:
+#  post:
+#    - python -c "import nltk; nltk.download(['maxent_treebank_pos_tagger', 'punkt'])"
+
+test:
+  override:
+    - ./manage.py test

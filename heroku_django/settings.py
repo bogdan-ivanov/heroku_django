@@ -1,3 +1,4 @@
+import dj_database_url
 """
 Django settings for heroku_django project.
 
@@ -73,14 +74,9 @@ WSGI_APPLICATION = 'heroku_django.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(default='postgres://postgres:iddqdidkfa@localhost:5432/django_heroku')
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

@@ -22,5 +22,5 @@ deployment:
       - heroku run python manage.py syncdb --app nameless-beach-9631
       - heroku run python manage.py migrate --app nameless-beach-9631
       - heroku maintenance:off --app foo-bar-123
-    heroku:
-      appname: nameless-beach-9631
+    #heroku:
+    #  appname: nameless-beach-9631

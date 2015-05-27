@@ -10,3 +10,10 @@ database:
 test:
   override:
     - ./manage.py test
+
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: nameless-beach-9631

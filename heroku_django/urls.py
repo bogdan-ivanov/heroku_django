@@ -19,5 +19,6 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^$', 'blog.views.index', name='index'),
+    url(r'^authors$', 'blog.views.authors', name='authors'),
     url(r'^admin/', include(admin.site.urls)),
 ]
